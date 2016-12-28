@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Yurij Oleynik js_1</title>
+</head>
+<body>
+	
+	<script>
+	// Ввод чисел
+		var firstNumber = +prompt('Введите  число', '');
+		var secondNumber = +prompt('Введите  степень', '');
+		var rezultat = 1;
+		var loopCounter;
+		
+
+		if (secondNumber == 0) {
+			console.log( 'Результат равен 1' );
+		} else 	if ( secondNumber > 0 ) {
+						loopCounter = secondNumber;
+						pow(firstNumber, loopCounter);
+						console.log(firstNumber + ' в степени ' + secondNumber + ' равно ' + rezultat);
+				} else {
+							loopCounter = -1 * secondNumber;
+							rezultat = 1 / pow(firstNumber, loopCounter);
+							console.log(firstNumber + ' в степени ' + secondNumber + ' равно ' + rezultat); 
+				  };
+		
+	//Функция возведения в степень 
+		function pow(firstNumber, loopCounter) {
+			 
+			 for (var i = 1; i <= loopCounter; i++) {
+				rezultat = firstNumber * rezultat; 
+			 };
+			 return rezultat;
+		}
+		
+	</script>
+</body>
+</html>
